@@ -3,4 +3,6 @@
 
 
 - 24.05.03 Avatars 과제<br />
-https://ttining-real.github.io/homework/avatars/avatars.html
+<a href="https://github.com/ttining-real/homework/blob/main/avatars/avatars.md" target="_blank">Avatars_README.md</a>
+<br>
+<a href="https://ttining-real.github.io/homework/avatars/avatars.html" target="_blank">Avatars.html</a>

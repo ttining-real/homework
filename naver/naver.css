@@ -1,0 +1,181 @@
+@import url(./reset.css);
+
+:root {
+  --base-font-family: 'NanumSquareNeo';
+  --naver-green: #03cf5d;
+  --naver-black: #181818;
+  --naver-white: #ffffff;
+  --focus-color: #24388d;
+}
+
+*:focus {
+  outline: 1px solid var(--focus-color);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  inline-size: 1px;
+  height: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 로그인 폼 스타일 정의 */
+body {
+  font-family: var(--base-font-family);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.login-section {
+  --base-font-size: 1rem;
+  --base-color: var(--naver-black);
+
+  font-size: var(--base-font-size);
+  color: var(--base-color);
+
+  .login-logo {
+    margin: 4rem 0;
+    text-align: center;
+    font-size: 0.0625rem;
+  }
+
+  .login-form {
+    padding: 0 1.25rem;
+
+    .login-form-inner {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 0.625rem;
+    }
+  }
+}
+
+/* 로그인 인풋 컴포넌트 */
+.form-input {
+  --input-background: var(--naver-white);
+  --input-color: var(--naver-black);
+  --input-border-color: #dadada;
+  --input-font-size: 0.875rem;
+  --input-height: 45px;
+  --input-focus-background: #e9f0fd;
+
+  input {
+    width: 100%;
+    height: var(--input-height);
+    block-size: var(--input-height);
+    padding: 0 0.75rem;
+    padding-inline: 0.75rem;
+    border: 1px solid var(--input-border-color);
+    background-color: var(--naver-white);
+    &:focus {
+      outline: 1px solid var(--naver-green);
+      background-color: var(--input-focus-background);
+    }
+  }
+}
+
+/* 로그인 버튼 컴포넌트 */
+.login-button {
+  --button-background: var(--naver-green);
+  --button-color: var(--naver-white);
+  --button-font-size: 1rem;
+  --button-height: 45px;
+
+  width: 100%;
+  height: var(--button-height);
+  block-size: var(--button-height);
+  margin-top: 0.625rem;
+  color: var(--button-color);
+  border: 0;
+  background-color: var(--button-background);
+}
+
+/* 로그인 옵션 */
+.login-option {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin-top: 0.625rem;
+  padding: 0 1.25rem;
+
+  .ip-security {
+    display: none;
+  }
+
+  .keep-login {
+    display: flex;
+    align-items: center;
+
+    input[type='checkbox'] {
+      position: absolute;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      margin: 0;
+    }
+    label {
+      padding-left: 1.8125rem;
+      line-height: 1.5rem;
+      background: url(./icons/unchecked.svg) no-repeat 0 0 / 24px 24px;
+    }
+    input[type='checkbox']:checked + label {
+      background-image: url(./icons/checked.svg);
+    }
+  }
+}
+
+/* 768px */
+@media (min-width: 768px) {
+  .login-section {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .login-option {
+    justify-content: space-between;
+    .ip-security {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: 10px;
+    }
+    .switch-button {
+      position: relative;
+
+      input[type='checkbox'] {
+        position: absolute;
+        appearance: none;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      label {
+        &::before {
+          content: 'OFF';
+          color: var(--naver-black);
+        }
+        &::after {
+          content: 'ON';
+          display: none;
+          color: var(--naver-green);
+        }
+      }
+
+      input[type='checkbox']:checked + label {
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+}

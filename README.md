@@ -3,8 +3,8 @@
 
 
 ### 24.05.10 Naver Login 과제
-- <a href="https://github.com/ttining-real/homework/blob/main/naver/naver.md" target="_blank">Naver_README.md</a>
-- <a href="https://ttining-real.github.io/homework/naver/naver.html" target="_blank">Naver.html</a>
+- <a href="https://github.com/ttining-real/homework/blob/main/naver/naver.md" target="_blank">naver_README.md</a>
+- <a href="https://ttining-real.github.io/homework/naver/naver.html" target="_blank">naver.html</a>
 
 <hr>
 

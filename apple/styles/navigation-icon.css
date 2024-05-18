@@ -8,9 +8,14 @@
 
   width: 2.75rem;
   height: 2.75rem;
-  padding: 1rem 0.75rem;
+  margin: 4px;
+  padding: 18px 14px;
   border: 0;
   background-color: transparent;
+
+  &:focus-within{
+    outline-offset: -6px;
+  } 
 
   .nav-bar {
     width: 100%;

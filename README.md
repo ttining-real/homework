@@ -1,6 +1,11 @@
 # homework
 테킷 프론트엔드 스쿨 10기 과제 저장소
 
+### 24.05.16 Apple 메인 화면 과제
+- <a href="https://github.com/ttining-real/homework/blob/main/apple/apple.md" target="_blank">apple_README.md</a>
+- <a href="https://ttining-real.github.io/homework/apple/apple.html" target="_blank">apple.html</a>
+
+<hr>
 
 ### 24.05.10 Naver Login 과제
 - <a href="https://github.com/ttining-real/homework/blob/main/naver/naver.md" target="_blank">naver_README.md</a>

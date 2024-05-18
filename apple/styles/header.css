@@ -1,0 +1,66 @@
+/* header */
+.header {
+  background-color: var(--black);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.75rem;
+
+  .logo {
+    height: inherit;
+    a {
+      display: inline-block;
+      padding: 0 1rem;
+      .svg-icon-logo {
+        fill: var(--white);
+      }
+    }
+  }
+  .global-navigation {
+    --nav-bg: var(--black);
+    flex: 1 0 0;
+
+    display: none;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+    background-color: var(--nav-bg);
+
+    .menu {
+      --menu-text: var(--xx-small-text);
+      --menu-gap: var(--base-spacing);
+      --menu-color: var(--white);
+
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+      gap: var(--menu-gap);
+      height: inherit;
+
+      li {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        color: var(--menu-color);
+        font-size: var(--menu-text);
+        a {
+          display: block;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    .global-navigation {
+      display: flex;
+    }
+    .navigation-icon {
+      display: none;
+    }
+  }
+}

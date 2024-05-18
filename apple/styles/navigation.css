@@ -1,0 +1,74 @@
+/* navigation component */
+.navigation {
+  --nav-bg: var(--black);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--nav-bg);
+  translate: 0 -100%;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+
+  &.is-active {
+    translate: 0 0;
+    opacity: 1;
+  }
+
+  .menu {
+    --menu-text: var(--large-text);
+    --menu-spacing: var(--large-spacing);
+    --menu-gap: var(--small-spacing);
+    --menu-color: var(--white);
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--menu-gap);
+    padding: var(--menu-spacing);
+
+    li {
+      a {
+        display: block;
+        padding: 0.25rem 0.5rem;
+        color: var(--menu-color);
+        font-size: var(--menu-text);
+        font-weight: 700;
+      }
+    }
+  }
+
+  .navigation-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transition-duration: 0.2s;
+
+    .nav-bar {
+      align-self: center;
+      background-color: #aaa;
+      &.nav-bar-top {
+        rotate: 45deg;
+      }
+      &.nav-bar-bottom {
+        rotate: -45deg;
+      }
+    }
+
+    &.is-active {
+      .nav-bar {
+        rotate: 0deg;
+        &.nav-bar-top {
+          align-self: start;
+        }
+        &.nav-bar-bottom {
+          align-self: end;
+        }
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}

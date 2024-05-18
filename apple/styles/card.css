@@ -1,0 +1,75 @@
+/* card component */
+.card {
+  --card-height: var(--size);
+  --card-spacing: var(--large-spacing);
+  --card-title-color: var(--white);
+  --card-title-size: var(--large-text);
+  --card-title-sub-size: var(--base-text);
+  --card-text-color: var(--gray);
+  --card-text-size: var(--small-text);
+  --card-gap: var(--small-spacing);
+  --button-gap: var(--base-spacing);
+
+  min-height: var(--card-height);
+
+  .card-contents {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--card-gap);
+    text-align: center;
+    padding-top: var(--card-spacing);
+  }
+
+  .card-title {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--card-gap);
+    color: var(--card-title-color);
+    font-size: var(--card-title-size);
+
+    .title {
+      font-weight: 600;
+    }
+
+    .sub-title {
+      line-height: var(--line-normal);
+      font-size: var(--card-title-sub-size);
+      em {
+        display: block;
+        font-style: normal;
+      }
+    }
+  }
+  .card-text {
+    line-height: var(--line-normal);
+    color: var(--card-text-color);
+    font-size: var(--card-text-size);
+  }
+  .card-button-group {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: var(--button-gap);
+  }
+
+  @media (min-width: 1024px) {
+    --card-spacing: var(--extra-large-spacing);
+    --card-title-size: var(--extra-large-text);
+    --card-title-sub-size: var(--medium-text);
+
+    .card-contents {
+      padding-top: var(--card-spacing);
+    }
+
+    .card-title {
+      font-size: var(--card-title-size);
+      .sub-title {
+        font-size: var(--card-title-sub-size);
+        em {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

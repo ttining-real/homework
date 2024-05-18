@@ -1,0 +1,44 @@
+/* navigation button */
+.navigation-icon {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  overflow: hidden;
+
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 1rem 0.75rem;
+  border: 0;
+  background-color: transparent;
+
+  .nav-bar {
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    transition: all 0.2s;
+    grid-area: 1 / 1 / 2 / 2;
+
+    &.nav-bar-top {
+      align-self: start;
+    }
+    &.nav-bar-bottom {
+      align-self: end;
+    }
+  }
+  &.is-active {
+    .nav-bar-top,
+    .nav-bar-bottom {
+      align-self: center;
+    }
+
+    .nav-bar-top {
+      rotate: 45deg;
+    }
+
+    .nav-bar-bottom {
+      rotate: -45deg;
+    }
+  }
+}

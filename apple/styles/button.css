@@ -1,0 +1,73 @@
+/* link button component */
+.button-link {
+  --btn-sm-spacing: var(--x-small-spacing);
+  --btn-md-spacing: var(--small-spacing);
+  --btn-text: var(--xx-small-text);
+  --btn-color: var(--white);
+  --btn-outlined: var(--blue-300);
+  --btn-filled: var(--blue-400);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: var(--btn-sm-spacing) var(--btn-md-spacing);
+  color: var(--btn-color);
+  font-size: var(--btn-text);
+  font-weight: 600;
+  border-radius: 2rem;
+  background-color: var(--btn-filled);
+  
+  &:hover{
+    background-color: var(--blue-200);
+  }
+
+  &.outlined {
+    color: var(--btn-outlined);
+    border: 1px solid currentColor;
+    background-color: transparent;
+    &:hover{
+      color: var(--btn-color);
+      border-color: var(--btn-filled);
+      background-color: var(--blue-300);
+    }
+  }
+
+  &.button-dark {
+    --btn-color: var(--white);
+    --btn-outlined: var(--black);
+    --btn-filled: var(--black);
+    --btn-dark-fill: #2c2c2f;
+
+    color: var(--btn-color);
+    background-color: var(--btn-filled);
+    
+    &:hover {
+      background-color: var(--btn-dark-fill);
+    }
+    
+    &.outlined {
+      color: var(--btn-outlined);
+      border: 1px solid currentColor;
+      background-color: transparent;
+      
+      &:hover{
+        color: var(--btn-color);
+        border-color: var(--btn-filled);
+        background-color: var(--btn-filled);
+      }
+    }
+  }
+  &:focus-visible {
+    outline: 2px solid var(--blue-300);
+    outline-offset: 3px;
+  }
+
+  @media (min-width: 1024px) {
+    & {
+      --btn-text: var(--x-small-text);
+
+      font-size: var(--btn-text);
+    }
+  }
+}
